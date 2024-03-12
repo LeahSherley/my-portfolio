@@ -1,389 +1,443 @@
-        @import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
-        @import 'utilities.css';
-         :root {
-            --primary: rgb(29, 221, 189);
-            --bgDark: rgb(12, 12, 12);
-            --white: rgb(250, 250, 250);
-            --secondary: rgb(0, 59, 50);
-            --bgLight: rgb(190, 181, 181);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        header {
-            background-color: var(--bgDark);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
-        }
-        
-        header nav .nav-items a {
-            color: var(--white);
-            text-decoration: none;
-            margin-right: 2rem;
-            text-transform: uppercase;
-            transition: all 0.2s ease;
-        }
-        
-        header nav .nav-items a:hover {
-            color: var(--primary);
-        }
-        
-        header nav {
-            padding: 2rem 0;
-        }
-        
-        .nav-items {
-            display: flex;
-            justify-content: right;
-        }
-        
-        body {
-            font-family: 'Gentium Plus', serif;
-        }
-        
-        .container {
-            max-width: 1152px;
-            padding: 0 15px;
-            margin: 0 auto;
-        }
-        
-        .hero {
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-            background-color: var(--bgDark);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .hero .image img {
-            width: 400px;
-            border-radius: 30px;
-        }
-        
-        .hero .image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .hero .Information {
-            color: var(--white);
-            margin-top: -7rem;
-            flex: 1.2;
-        }
-        
-        .hero .Information h6 {
-            font-size: 1.6rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            margin-top: 0.5rem;
-        }
-        
-        .hero .Information h1 {
-            font-size: 4rem;
-            font-weight: 100;
-            margin-bottom: 2rem;
-            line-height: 1.2;
-        }
-        
-        .hero .Information h1 span {
-            color: var(--primary);
-        }
-        
-        .hero .Information p {
-            line-height: 1.9;
-            margin-bottom: 2rem;
-            padding: 0.5rem;
-            text-align: start;
-            justify-content: left;
-        }
-        
-        .btn {
-            padding: 0.6rem 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border: 2px solid transparent;
-            outline: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.2s ease;
-            border-radius: 10px;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--secondary);
-            margin-top: -15rem;
-        }
-        
-        .btn-primary:hover {
-            background: transparent;
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border-color: var(--primary);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: var(--secondary);
-        }
-        
-        section {
-            padding: 6rem;
-        }
-        
-        section.about h1 {
-            margin-bottom: 1rem;
-            font-size: 1.6rem;
-            font-weight: 600;
-        }
-        
-        section.about h1 span {
-            color: var(--primary);
-        }
-        
-        section.about h3 {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        section.about p {
-            font-family: 'Gentium Plus', serif;
-            color: var(--secondary);
-            line-height: 1.9rem;
-            margin-bottom: 2rem;
-        }
-        
-        section.about .socials {
-            display: flex;
-        }
-        
-        section.about .socials a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            margin-right: 0.8rem;
-            border-radius: 50%;
-        }
-        
-        section.about .socials a:hover {
-            background: var(--primary);
-        }
-        
-        section.skills {
-            background: var(--bgDark);
-        }
-        
-        .skills-head {
-            color: rgb(l0, 9, 9);
-            text-align: center;
-            margin-bottom: 1rem;
-            line-height: 0.5rem;
-            color: var(--primary);
-        }
-        
-        .skillss-head,
-        p {
-            color: var(--white);
-            font-family: 'Gentium Plus', serif;
-            text-align: center;
-            margin-bottom: 5rem;
-            font-weight: 400;
-        }
-        
-        .card {
-            flex: 0 1 calc(25% - 20px);
-            margin: 10px;
-            padding: 25px;
-            border-radius: 20px;
-        }
-        
-        .card h2 {
-            margin-top: 1rem;
-            color: var(--primary);
-        }
-        
-        .card img {
-            width: 95px;
-            height: 68px;
-            background: white;
-            border-radius: 10px;
-        }
-        
-        .card-grid {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        
-        section.skills .card-grid .card {
-            background: #353935;
-            padding: 3rem 2rem;
-            position: relative;
-            text-align: center;
-            transition: all 0.2s ease;
-        }
-        
-        section.skills .card-grid .card img {
-            position: absolute;
-            top: -1.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var();
-        }
-        
-        section.skills .card-grid .card h2 {
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        section.skills .card-grid .card p {
-            font-family: 'Gentium Plus', serif;
-            color: var(--white);
-            line-height: 1.6;
-        }
-        
-        section.skills .card-grid .card:hover {
-            background: var(--primary);
-        }
-        
-        section.skills .card-grid .card:hover h2 {
-            color: var(--white);
-        }
-        
-        section.skills .card-grid .card:hover p {
-            color: var(--bgDark);
-        }
-        
-        .skills {
-            transition: transform 0.3s ease;
-        }
-        
-        .skills:hover {
-            transform: scale(1.05);
-        }
-        
-        section.github {
-            background: rgb(17, 17, 17);
-            padding: 6rem 0;
-        }
-        
-        .github {
-            transition: transform 0.3s ease;
-            height: 100vh;
-        }
-        
-        .github:hover {
-            transform: scale(1.05);
-        }
-        
-        .github h2 {
-            color: var(--primary);
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        
-        .github p {
-            color: var(--white);
-            font-family: 'Gentium Plus', serif;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-        
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .project {
-            background-color: #353935;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            width: calc(33.33% - 40px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .project:hover {
-            transform: scale(1.05);
-        }
-        
-        .project h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .project p {
-            color: var(--white);
-            margin-bottom: 1.5rem;
-        }
-        
-        .project a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-        
-        .project a:hover {
-            color: var(--bgDark);
-        }
-        
-        project a:hover {
-            color: var(--secondary);
-        }
-        
-        @media screen and (max-width: 768px) {
-            .nav-items {
-                justify-content: center;
-            }
-            .hero .image img {
-                max-width: 300px;
-            }
-            .card {
-                flex: 0 1 calc(50% - 20px);
-            }
-            .project {
-                width: calc(50% - 40px);
-            }
-        }
-        
-        @media screen and (max-width: 576px) {
-            .hero .image img {
-                max-width: 200px;
-            }
-            .card {
-                flex: 0 1 calc(100% - 20px);
-            }
-            .project {
-                width: calc(100% - 40px);
-            }
-        }
-        
-        .contact-form {
-            display: none;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
+@import 'utilities.css';
+ :root {
+    --primary: rgb(29, 221, 189);
+    --bgDark: rgb(12, 12, 12);
+    --white: rgb(250, 250, 250);
+    --secondary: rgb(0, 59, 50);
+    --bgLight: rgb(190, 181, 181);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background-color: var(--bgDark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
+}
+
+header nav .nav-items a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+header nav .nav-items a:hover {
+    color: var(--primary);
+}
+
+header nav {
+    padding: 2rem 0;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: right;
+}
+
+body {
+    font-family: 'Gentium Plus', serif;
+}
+
+.container {
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--bgDark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .image img {
+    width: 400px;
+    border-radius: 30px;
+}
+
+.hero .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .Information {
+    color: var(--white);
+    margin-top: -7rem;
+    flex: 1.2;
+}
+
+.hero .Information h6 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.hero .Information h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.hero .Information h1 span {
+    color: var(--primary);
+}
+
+.hero .Information p {
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    text-align: start;
+    justify-content: left;
+}
+
+.btn {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    font-family: 'Gentium Plus', serif;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+    margin-top: -15rem;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+section {
+    padding: 6rem;
+}
+
+.contact-form h1 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.contact-form h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+section.contact-form {
+    background: rgb(17 17 17);
+    padding: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: scale(1.02)
+}
+
+.contact-form form {
+    max-width: 400px;
+    margin: auto 0;
+    border-radius: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    color: var(--primary);
+}
+
+.contact-form input,
+.contact-form textarea {
+    border-radius: 8px;
+    background-color: #353935;
+    font-family: 'Gentium Plus', serif;
+    outline: none;
+    color: var(--white);
+}
+
+.contact-form input,
+.contact-form textarea:hover {
+    outline: none;
+}
+
+section.skills {
+    background: var(--bgDark);
+}
+
+.skills-head {
+    color: rgb(l0, 9, 9);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+    color: var(--primary);
+}
+
+.skillss-head,
+p {
+    color: var(--white);
+    font-family: 'Gentium Plus', serif;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: 400;
+}
+
+.card {
+    flex: 0 1 calc(25% - 20px);
+    margin: 10px;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.card h2 {
+    margin-top: 1rem;
+    color: var(--primary);
+}
+
+.card img {
+    width: 95px;
+    height: 68px;
+    background: white;
+    border-radius: 10px;
+}
+
+.card-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section.skills .card-grid .card {
+    background: #353935;
+    padding: 2rem 2rem;
+    position: relative;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+section.skills .card-grid .card img {
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var();
+}
+
+section.skills .card-grid .card h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+section.skills .card-grid .card p {
+    font-family: 'Gentium Plus', serif;
+    color: var(--white);
+    line-height: 1.6;
+}
+
+section.skills .card-grid .card:hover {
+    background: var(--primary);
+}
+
+section.skills .card-grid .card:hover h2 {
+    color: var(--white);
+}
+
+section.skills .card-grid .card:hover p {
+    color: var(--bgDark);
+}
+
+.skills {
+    transition: transform 0.3s ease;
+}
+
+.skills:hover {
+    transform: scale(1.05);
+}
+
+section.github {
+    background: rgb(17, 17, 17);
+    padding: 6rem 0;
+}
+
+.github {
+    transition: transform 0.3s ease;
+    height: 100vh;
+}
+
+.github:hover {
+    transform: scale(1.05);
+}
+
+.github h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.github p {
+    color: var(--white);
+    font-family: 'Gentium Plus', serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    background-color: #353935;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: calc(33.33% - 40px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.project p {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.project a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.project a:hover {
+    color: var(--bgDark);
+}
+
+project a:hover {
+    color: var(--secondary);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-items {
+        justify-content: center;
+    }
+    .hero .image img {
+        max-width: 300px;
+    }
+    .card {
+        flex: 0 1 calc(50% - 20px);
+    }
+    .project {
+        width: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero .image img {
+        max-width: 200px;
+    }
+    .card {
+        flex: 0 1 calc(100% - 20px);
+    }
+    .project {
+        width: calc(100% - 40px);
+    }
+}
+
+.footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.social-icons a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.social-icons a i:hover {
+    color: var(--bgDark);
+}
+
+.footer-links a:hover {
+    color: var(--bgDark);
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
