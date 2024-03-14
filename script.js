@@ -11,3 +11,12 @@ function showText() {
 }
 
 setInterval(showText, 380);
+
+/*document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const navItems = document.querySelector('.nav-items');
+
+    menuBtn.addEventListener('click', function() {
+        navItems.classList.toggle('show');
+    });
+});*/
