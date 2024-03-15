@@ -20,3 +20,22 @@ setInterval(showText, 380);
         navItems.classList.toggle('show');
     });
 });*/
+window.addEventListener('scroll', function() {
+    var firstSectionHeight = window.innerHeight;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    var button = document.getElementById('scrollToTopBtn');
+
+    if (scrollTop > firstSectionHeight) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
