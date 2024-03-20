@@ -457,9 +457,45 @@
             visibility: visible;
             z-index: 999;
         }
+        
+        form input:required,
+        form textarea:required {
+            border-color: var(--secondary);
+        }
+        
+        form input:required:focus,
+        form textarea:required:focus {
+            border-color: var(--secondary);
+        }
+        
+        form label:after {
+            content: "*";
+            color: var(--primary);
+        }
         /* For screens smaller than 992px */
         
         @media screen and (max-width: 992px) {
+            header nav {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            header nav .nav-items {
+                margin-top: 1rem;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+            .hero .image img {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 2rem;
+            }
+            .hero .Information {
+                margin-top: 0;
+            }
             header nav .nav-items a {
                 margin-right: 1rem;
             }
@@ -471,6 +507,10 @@
                 padding: 0.5rem;
                 text-align: center;
                 justify-content: center;
+            }
+            section.skills .card-grid .card {
+                flex: 0 1 calc(50% - 20px);
+                padding: 20px;
             }
         }
         /* For screens smaller than 768px */
@@ -505,6 +545,7 @@
             }
             section.skills .card-grid .card {
                 flex: 0 1 calc(50% - 20px);
+                padding: 20px;
             }
             .project {
                 width: calc(50% - 40px);
@@ -541,7 +582,7 @@
             }
             section.skills .card-grid .card {
                 flex: 0 1 calc(100% - 20px);
-                margin: 15px;
+                padding: 20px;
             }
             .project {
                 width: calc(100% - 20px);
